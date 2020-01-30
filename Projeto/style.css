@@ -1,0 +1,371 @@
+/*              Estruturação do site */
+body 
+{
+    background-color: #edeff0;
+    margin: 0 auto;
+    width: 60em;
+    /*Para estruturar o site*/
+    display: grid;
+    grid-template-columns: [start] 4fr [middle] 1fr [end];
+    grid-template-rows: [start] auto [nav] auto [news] 1fr [footer] auto [end];
+    
+  }
+  
+  body > header 
+  {
+
+    grid-column: start / end;
+  }
+  
+  #menu 
+  {
+    grid-column: start;
+  }
+  
+  aside 
+  {
+    grid-column: middle;
+    grid-row: nav / end;
+  }
+  
+  #news 
+  {
+    grid-column: start;
+  }
+  
+  body > footer 
+  {
+    align-self: end;
+  }
+  
+  /* Edtrutura do Header */
+  
+  body > header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+  
+  body > header h1 
+  {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  body > header h2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  body > header #signup 
+  {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  /* Estrutura do footers dos artigos*/
+  
+  #news footer 
+  {
+    display: flex;
+  }
+  
+  #news footer .author 
+  {
+    flex-grow: 1;
+  }
+  
+  /* Estruração da navegação do menu*/
+  
+  #menu ul 
+  {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #menu li 
+  {
+    display: block;
+    flex: 1;
+  }
+  
+
+/*            Style dos site*/
+
+body > header 
+{
+    /*Cor escolhida da internet*/
+    background-color:rgb(199, 73, 73);
+    color: white;    
+    /*Para ficar mais cheio o header*/
+    padding: 1em;
+  }
+  
+  body > header h1, body > header h2
+  {
+    margin: 0;
+  }
+  
+  body > header a 
+  {
+      /*Cores do titulo e dos logins e registares*/
+    color: white;
+    text-decoration: none;  
+  }
+  
+  body > header #signup a:first-child 
+  {
+    border-right: 1px solid black;
+  }
+  
+  body > header #signup a 
+  {
+    padding: 0 1em;
+  }
+  
+  body > header #signup a:first-child 
+  {
+    padding-left: 0;
+  }
+  
+ 
+  
+  #menu ul 
+  {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #menu li 
+  {
+    background-color: white;
+    text-align: center;
+  
+    list-style-type: none;
+  
+    padding: 1em 0;
+  }
+  
+  #menu li a
+  {
+    color: black;
+    text-decoration: none;
+  }
+  
+  #menu li:hover 
+  {
+      /*Quando der hover aos temas do menu ele transforma a caixa black*/
+    background-color: #212325;
+  }
+  
+  #menu li:hover a
+  {
+      /*A letra fica branca também para distinguir*/
+    color: white;
+  }
+  
+
+  
+  /*Style dos artigos*/
+  
+  #news header 
+  {
+    max-width: 10em;
+    padding: 1em;
+    position: absolute;
+  }
+  
+  #news header h1
+  {
+    margin: 0;
+  
+    text-shadow: .2em .2em .2em black;
+  }
+  
+  #news header a
+  {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  
+  #news img 
+  {
+    width: 100%;
+  }
+  
+  #news > article 
+  {
+    background-color: white;
+  
+    margin: 1em 1em 1em 0;
+  }
+  
+  #news > article > p
+  {
+    padding: 0 1em;
+  }
+  
+  #news > article > p:first-of-type:first-letter
+  {
+    font-size: 2em;
+  }
+  
+  #news footer 
+  {
+    color: white;
+    background-color: coral;
+  
+    padding: 1em;
+  }
+  
+  #news footer a
+  {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+  }
+  
+  #news footer .tags 
+  {
+    margin-right: 1em;
+  }
+  
+  #news footer .comments 
+  {
+    margin-left: 1em;
+  }
+  
+  #news footer .comments:after 
+  {
+    content: 'Comentários';
+  }
+  
+  #news footer .author:before
+  {
+    content: "Por";
+  }
+  
+ /*Noticias de lado*/
+  
+  #related 
+  {
+    background-color: #212325;
+  
+    padding: 2em;
+  }
+  
+  #related h1 a 
+  {
+    color: red;
+    text-decoration: none;
+  }
+  
+  #related p 
+  {
+    color: white;
+  }
+  
+  /* Footer */
+  
+  body > footer 
+  {
+    background-color: #212325;
+    color: white;
+  
+    padding: 1em;
+    margin-right: 1em;
+  
+    height: 1em;
+  }
+  
+  body > footer p 
+  {
+    margin: 0;
+  }
+  
+  /* fontes do site*/ 
+  
+  body 
+  {
+    font-family: 'Arial', sans-serif;
+  }
+  h1
+  {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+  
+  p 
+  {
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  
+  #news header 
+  {
+    font-size: 2em;
+  }
+  header h2 
+  {
+    font-size: 1em;
+  }
+  
+  header a 
+  {
+    font-size: 0.8em;
+
+  }
+  #news footer 
+  {
+    font-size: 0.8em;
+  }
+  /*             Forms*/
+  form {
+    background-color: white;
+    color: black;
+    margin: 2em auto;
+    width: 20em;
+    padding: 1em;
+  }
+  
+  label {
+    padding: 1em;
+  }
+  
+  label, input {
+    display: block;
+  }
+  
+  input {
+    border: none;
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid black;  
+    font-size: 1em;
+  }
+  
+  input[type=submit] {
+    width: auto;
+  
+    background-color: black;
+    color: white;
+  
+    border: none;
+    margin: 1em;
+    padding: 1em;
+    margin-left: auto;
+  }
+  
+  input:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(199, 73, 73);
+  }
+  
+
+  
+  
+  
+  
+  
+  
+  
