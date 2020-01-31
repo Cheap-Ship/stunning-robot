@@ -1,4 +1,4 @@
-/*              Estruturação do site */
+/* Estruturação do site */
 body 
 {
     background-color: #edeff0;
@@ -88,7 +88,7 @@ body
   }
   
 
-/*            Style dos site*/
+/* Style dos site*/
 
 body > header 
 {
@@ -343,7 +343,7 @@ body > header
     font-size: 1em;
   }
   
-  input[type=submit] {
+  input[type=submit], input[type=button] {
     width: auto;
   
     background-color: black;

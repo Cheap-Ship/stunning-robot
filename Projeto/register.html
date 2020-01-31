@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt">
     <head>
-        <title>Jornal da ESMAD</title>           
-        <link href="style.css" rel="stylesheet">        
-        <link href="Comentarios.css" rel="stylesheet">
+        <title>Jornal da ESMAD</title>
+        <script src="js\accounts.js"></script>
+        <link href="css\style.css" rel="stylesheet">        
+        <link href="css\Comentarios.css" rel="stylesheet">
       </head>
   <body>
     <header>
         <h1><a href="index.html">Jornal da ESMAD</a></h1>
         <h2>Se é importante tu és o primeiro a saber</h2>
         <div id="signup">
-         <a href="register.html">Registrar</a>
+         <a href="register.html">Registar</a>
          <a href="login.html">Logar</a>
   
         </div>
@@ -46,18 +47,18 @@
       </article>
     </aside>
     <section id="register">
-      <h1>Registrar</h1>
-      <form>
+      <h1>Registar</h1>
+      <form onsubmit="registar()">
         <label>
-          Nome do username <input type="text" name="username" required>
+          Nome de Utilizador <input type="text" name="username" id="user" required>
         </label>
         <label>
-          Email <input type="email" name="email" required>
+          Email <input type="email" name="email" id="mail" required>
         </label>
         <label>
-          Palavra passe <input type="password" name="password" required>
+          Palavra passe <input type="password" name="password" id="pass" required>
         </label>
-        <input type="submit" value="Register">
+        <input type="submit" value="Registar">
       </form>
     </section>
     <footer>
